@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangun Villa Impian — Spesialis Desain & Konstruksi Villa Resort | Selaras Arsitektur</title>
+    <meta name="description" content="Sulap lahan kosong Anda menjadi Private Villa atau Boutique Resort mewah berstandar internasional. Terima kunci tanpa stres bersama PT Selaras.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tropical: {
+                            light: '#F8F6F0',   
+                            dark: '#1C211F',    
+                            accent: '#C59A6F',  
+                            accentHover: '#AC8056',
+                            leaf: '#2D3E36',    
+                            gray: '#858E8A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: theme('colors.tropical.light'); color: theme('colors.tropical.dark'); }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F8F6F0; }
+        ::-webkit-scrollbar-thumb { background: #C59A6F; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bg-villa {
+            background-image: linear-gradient(to bottom, rgba(28,33,31,0.6), rgba(28,33,31,0.9)), url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        @media (max-width: 768px) {
+            .bg-villa { background-attachment: scroll; }
+        }
+
+        .floating-booking {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- TOP BAR ANNOUNCEMENT -->
+    <div class="bg-tropical-accent text-white py-2 text-center text-xs tracking-widest uppercase font-medium">
+        Kapasitas Kuartal Ini Sisa: 2 Slot Proyek Rancang Bangun Area Jawa Barat Raya
+    </div>
+
+    <!-- LOGO ONLY NAV -->
+    <nav class="absolute w-full z-50 py-6 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 text-center shadow-md">
+            <span class="font-serif text-2xl font-bold tracking-widest text-white uppercase" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">SELARAS <span class="text-tropical-accent font-sans text-xs tracking-widest font-normal ml-2">Villa Experts</span></span>
+        </div>
+    </nav>
+
+    <!-- Niche HERO SECTION -->
+    <header class="relative min-h-[90vh] flex items-center justify-center pt-20 pb-24 bg-villa">
+        <div class="relative z-10 max-w-5xl mx-auto px-6 w-full text-center">
+            <div class="animate-fade-in-up">
+                <span class="inline-block px-4 py-1 border border-tropical-accent/50 text-tropical-accent text-xs md:text-sm uppercase tracking-widest mb-6 rounded-full backdrop-blur-sm">
+                    Spesialis Rancang Bangun Villa & Resort Privat
+                </span>
+                <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-white mb-6">
+                    Sulap Lahan Kosong Anda Menjadi <br>
+                    <span class="italic text-tropical-accent">Private Villa Eksotis</span> Tanpa Drama.
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl font-light mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Kami mendesain dan mengeksekusi pembangunan villa berstandar <i>Boutique Hotel</i>, dari sketsa awal hingga Anda menerima kunci. Siap disewakan untuk pasif income tertinggi.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#konsultasi" class="inline-block bg-tropical-accent text-white uppercase tracking-widest text-sm font-semibold px-10 py-5 text-center hover:bg-tropical-accentHover transition-colors shadow-xl">
+                        Bedah Potensi Lahan Saya
+                    </a>
+                </div>
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs md:text-sm text-gray-300 font-light">
+                    <span class="flex items-center gap-1"><svg class="w-4 h-4 text-tropical-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Garansi Keterlambatan</span>
+                    <span class="flex items-center gap-1"><svg class="w-4 h-4 text-tropical-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> In-House Engineer Team</span>
+                    <span class="flex items-center gap-1"><svg class="w-4 h-4 text-tropical-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Legalitas Termasuk</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- THE UGLY TRUTH -->
+    <section class="py-24 bg-white border-b border-tropical-light">
+        <div class="max-w-5xl mx-auto px-6 reveal">
+            <h2 class="font-serif text-3xl md:text-5xl text-center mb-16 text-tropical-dark">Membangun Bisnis Villa Itu Menguntungkan, <br><span class="italic text-tropical-accent">Kecuali Jika...</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#FDF9F6] p-8 border-l-4 border-red-800/60 shadow-sm">
+                    <h3 class="font-semibold text-lg md:text-xl mb-3 text-tropical-dark">Tertipu Pemborong Lepasan</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">Dana sudah cair tapi lahan dibiarkan mandek berbulan-bulan karena tukang kabur. Kualitas material yang dipasang seringkali jauh di bawah spesifikasi kesepakatan.</p>
+                </div>
+                <div class="bg-[#FDF9F6] p-8 border-l-4 border-red-800/60 shadow-sm">
+                    <h3 class="font-semibold text-lg md:text-xl mb-3 text-tropical-dark">Desain Kaku & Kurang Jual</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">Ekspektasinya memiliki villa ala resort Bali, hasilnya malah terlihat seperti rumah petak kos-kosan. Estetika yang buruk membuat nilai sewa atau ROI anjlok drastis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SOLUTION: Turnkey Resort Service -->
+    <section class="py-24 bg-tropical-leaf text-white relative">
+        <div class="max-w-6xl mx-auto px-6 reveal">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Villa Architecture" class="w-full aspect-[4/5] object-cover shadow-2xl rounded-sm">
+                </div>
+                <div class="lg:w-1/2">
+                    <p class="text-tropical-accent uppercase tracking-widest text-xs font-semibold mb-4">Metodologi Selaras</p>
+                    <h2 class="font-serif text-4xl lg:text-5xl mb-6">Anda Hanya Perlu Menunjuk Lokasi Lahan Saja.</h2>
+                    <p class="text-gray-300 font-light leading-relaxed mb-10 text-lg">
+                        Lupakan stres memantau proyek kotor di lapangan. Fokuslah pada bisnis utama dan karir Anda. Selaras mengambil alih peran <em>Project Manager</em> secara utuh sebagai mitra satu pintu Anda.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-5">
+                            <span class="w-12 h-12 shrink-0 border border-tropical-accent text-tropical-accent rounded-full flex items-center justify-center font-serif text-xl">1</span>
+                            <div>
+                                <h4 class="font-semibold text-xl mb-2 text-white">Satu Kontrak, Validitas Hukum Bergaransi</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed">Nilai RAB tertutup dan tidak akan naik tiba-tiba di tengah pekerjaan. Kontrak notaris memastikan kami membayar denda pinalti komersial jika proyek meleset dari linimasa.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <span class="w-12 h-12 shrink-0 border border-tropical-accent text-tropical-accent rounded-full flex items-center justify-center font-serif text-xl">2</span>
+                            <div>
+                                <h4 class="font-semibold text-xl mb-2 text-white">Engineering Sipil In-House</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed">Konstruksi kolam renang (M&E), lanskap tropis bertebing, hingga sipil struktural dikalkulasi dan diawasi oleh tim insinyur tersertifikasi kami, bukan sekadar intuisi mandor.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <span class="w-12 h-12 shrink-0 border border-tropical-accent text-tropical-accent rounded-full flex items-center justify-center font-serif text-xl">3</span>
+                            <div>
+                                <h4 class="font-semibold text-xl mb-2 text-white">Laporan Eksekutif Real-Time</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed">Walaupun Anda di luar negeri, Anda memegang kendali atas update pengerjaan via dashboard digital dan grup pelaporan WhatsApp langsung dengan direksi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: MACRO TIMELINE (Added based on HNWI requirement) -->
+    <section class="py-24 bg-tropical-light">
+        <div class="max-w-5xl mx-auto px-6 reveal">
+            <div class="text-center mb-16">
+                <p class="text-tropical-accent uppercase tracking-widest text-xs font-semibold mb-4">Predictable Results</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-tropical-dark mb-4">Linimasa Eksekusi Makro Pembangunan</h2>
+                <p class="text-gray-500 font-light text-sm max-w-2xl mx-auto">Kami mengadopsi standar korporasi untuk mereduksi volatilitas proyek bangunan.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4 relative">
+                <!-- Line underlying connecting steps (hidden on mobile) -->
+                <div class="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-0.5 bg-tropical-accent/30 z-0"></div>
+                
+                <div class="relative z-10 text-center px-4">
+                    <div class="w-14 h-14 bg-white border-2 border-tropical-accent rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-tropical-accent text-xl shadow-md">01</div>
+                    <h3 class="font-serif text-lg md:text-xl font-medium mb-2 text-tropical-dark">Feasibility & Concept</h3>
+                    <p class="text-xs text-gray-600">Survei lahan, kontur as-built, desain arsitektural komersial & fiksasi RAB.</p>
+                    <span class="inline-block mt-3 px-3 py-1 bg-tropical-dark text-white text-[10px] uppercase tracking-widest rounded-sm">Bulan 1 - 2</span>
+                </div>
+                <div class="relative z-10 text-center px-4 mt-8 md:mt-0">
+                    <div class="w-14 h-14 bg-white border-2 border-tropical-accent rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-tropical-accent text-xl shadow-md">02</div>
+                    <h3 class="font-serif text-lg md:text-xl font-medium mb-2 text-tropical-dark">Sipil Struktural Utama</h3>
+                    <p class="text-xs text-gray-600">Pengurusan perizinan daerah, rekayasa tanah/tebing, dan pembangunan rangka sipil utuh.</p>
+                    <span class="inline-block mt-3 px-3 py-1 bg-tropical-dark text-white text-[10px] uppercase tracking-widest rounded-sm">Bulan 3 - 6</span>
+                </div>
+                <div class="relative z-10 text-center px-4 mt-8 md:mt-0">
+                    <div class="w-14 h-14 bg-white border-2 border-tropical-accent rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-tropical-accent text-xl shadow-md">03</div>
+                    <h3 class="font-serif text-lg md:text-xl font-medium mb-2 text-tropical-dark">Arsitektur & Interior</h3>
+                    <p class="text-xs text-gray-600">Pengerjaan mechanical electrical, atap, fasad eksotis, dan fiting furniture (M&E).</p>
+                    <span class="inline-block mt-3 px-3 py-1 bg-tropical-dark text-white text-[10px] uppercase tracking-widest rounded-sm">Bulan 7 - 9</span>
+                </div>
+                <div class="relative z-10 text-center px-4 mt-8 md:mt-0">
+                    <div class="w-14 h-14 bg-tropical-accent border-2 border-tropical-accent rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-white text-xl shadow-md">04</div>
+                    <h3 class="font-serif text-lg md:text-xl font-medium mb-2 text-tropical-dark">Serah Terima & Garansi</h3>
+                    <p class="text-xs text-gray-600"><i>Deep cleaning</i>, penyerahan operasional M&E, dan penyerahan surat garansi 5 Tahun.</p>
+                    <span class="inline-block mt-3 px-3 py-1 bg-tropical-accent text-white text-[10px] uppercase tracking-widest rounded-sm">Bulan 10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / INSPIRATION -->
+    <section class="py-24 bg-white overflow-hidden border-t border-tropical-light">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <h2 class="font-serif text-3xl md:text-4xl text-center mb-16 text-tropical-dark">Bayangkan Memiliki Resort Sempurna Seperti Ini.</h2>
+            
+            <div class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory hide-scroll">
+                <div class="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center group">
+                    <div class="aspect-[4/5] overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-tropical-dark">Boutique Bamboo Villa, Lembang</h3>
+                </div>
+                <div class="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center group">
+                    <div class="aspect-[4/5] overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-tropical-dark">Modern Tropical Retreat, Sentul</h3>
+                </div>
+                <div class="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center group">
+                    <div class="aspect-[4/5] overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="font-serif text-xl font-medium text-tropical-dark">Cliffside VIP Villa, Puncak</h3>
+                </div>
+            </div>
+            
+            <p class="text-center text-xs text-gray-400 mt-6">*Sisa portofolio komersial beserta detail nilai investasinya dikhususkan untuk diskusi pada sesi meeting persentasi tertutup.</p>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: EXECUTIVE FAQ -->
+    <section class="py-24 bg-tropical-dark text-white">
+        <div class="max-w-4xl mx-auto px-6 reveal">
+            <h2 class="font-serif text-3xl md:text-5xl text-center mb-16">Tanya Jawab Eksekutif</h2>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-white/10 pb-6">
+                    <h3 class="font-serif text-xl md:text-2xl text-tropical-accent mb-3">Apakah Selaras bisa mengurus lahan di kontur curam (tebing) dan IMB peruntukan pariwisata?</h3>
+                    <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed">Sangat bisa. Portofolio kami justru didominasi oleh struktur komersial di kawasan perbukitan. Kami memiliki konsultan AMDAL dan insinyur tanah (<em>Soil Test</em>) yang terbiasa membangun dinding penahan tanah (retaining wall) anti geser, serta legalitas <em>Hospitality</em> terkait tata ruang daerah.</p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-white/10 pb-6 mt-6">
+                    <h3 class="font-serif text-xl md:text-2xl text-tropical-accent mb-3">Saya tinggal di luar kota / luar negeri, bagaimana saya mengawasi proyeknya?</h3>
+                    <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed">Anda tidak perlu datang ke lokasi. Kami menyediakan ekosistem laporan progres mingguan dalam format visual (Foto/Video Drone), file rekap progres Excel untuk akuntan Anda, dan akses rekaman CCTV <em>Site Management</em> yang tayang secara <em>Live</em> jika dibutuhkan.</p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="mt-6">
+                    <h3 class="font-serif text-xl md:text-2xl text-tropical-accent mb-3">Bagaimana model transparansi termin pembayarannya?</h3>
+                    <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed">Pembayaran <em>(Termyn)</em> kami kaitkan langsung dengan volume kurva-S fisik bangunan, biasanya terbagi dalam 5 tahap. Kami tidak mengambil termin mendahului progres riil pembangunan di lapangan. Uang Anda aman tereksekusi menjadi material aset bangunan secara proporsional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECT RESPONSE CTA -->
+    <section class="py-24 bg-[#111111] text-white" id="konsultasi">
+        <div class="max-w-4xl mx-auto px-6 reveal">
+            <div class="border border-white/10 p-8 md:p-14 bg-white/5 backdrop-blur-md floating-booking text-center relative overflow-hidden shadow-2xl">
+                <!-- Abstract leaf bg -->
+                <div class="absolute -right-20 -top-20 opacity-5">
+                    <svg width="300" height="300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C12 22 4 15 4 8C4 3.6 7.6 0 12 0C16.4 0 20 3.6 20 8C20 15 12 22 12 22ZM12 4C9.8 4 8 5.8 8 8C8 12.3 12 17.5 12 17.5C12 17.5 16 12.3 16 8C16 5.8 14.2 4 12 4Z"/></svg>
+                </div>
+                
+                <h2 class="font-serif text-3xl md:text-5xl mb-6 relative z-10">Punya Lahan Eksotis Berpotensi Tinggi?</h2>
+                <p class="text-gray-400 mb-10 md:text-lg relative z-10 leading-relaxed font-light">
+                    Jangan biarkan aset Anda tidur dan hanya menjadi beban pajak. Hubungi Arsitek Principal kami untuk sesi konsul privat. Kami akan membantu membedah keistimewaan topografi lokasi dan mengestimasi nilai profit investasinya.<br><br><strong class="text-white font-medium">Bebas komitmen, gratis, dan sangat privat.</strong>
+                </p>
+
+                <!-- WA Button Direct Action -->
+                <a href="https://wa.me/6281234567890?text=Halo%20Selaras,%20saya%20punya%20lahan%20dan%20berminat%20berdiskusi%20untuk%20membangun%20Villa%20Premium." target="_blank" class="block w-full sm:inline-flex items-center justify-center gap-3 bg-[#25D366] text-white uppercase tracking-widest text-sm font-bold px-10 py-5 hover:bg-[#20bd5a] transition-all relative z-10 shadow-lg shadow-[#25D366]/20">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Tanya Progres Ketersediaan Slot
+                </a>
+                
+                <p class="mt-6 text-sm text-gray-500 relative z-10">*Slot pengawasan lapangan tahun ini hanya terbuka untuk nilai proyek di atas Rp 2 Miliar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-600 py-10 border-t border-white/5 text-center px-6">
+        <p class="text-[10px] md:text-xs uppercase tracking-widest">&copy; 2026 PT. Selaras Arsitektur Indonesia — Spesialis Bangun Villa & Resort Eksklusif Jawa Barat.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50; 
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>

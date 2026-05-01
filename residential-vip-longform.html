@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELARAS | Executive Residential Masterpiece</title>
+    <meta name="description" content="Jasa Rancang Bangun (Design & Build) eksklusif untuk kediaman keluarga bernilai tinggi.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        onyx: '#0A0A0C',       
+                        charcoal: '#141417',   
+                        champagne: '#D3B888',  
+                        champagneDark: '#B09565',
+                        textDim: '#A1A1AA', /* Mencerahkan text abu-abu agar terbaca */
+                        textBright: '#F4F4F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], /* Ganti ke Inter agar lebih bernuansa modern tech/SaaS */
+                        serif: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Neon/Glow Effects for "Not Flat" Design */
+        .glow-champagne {
+            box-shadow: 0 0 40px -10px rgba(211, 184, 136, 0.15);
+        }
+        
+        .glow-bg {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(211, 184, 136, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Glassmorphism Bento Cards */
+        .bento-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .bento-card:hover {
+            border-color: rgba(211, 184, 136, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+        }
+
+        /* Subtle smooth reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gold-line {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, theme('colors.champagne'), transparent);
+            margin: 0 auto;
+        }
+
+        ::selection { background: theme('colors.champagne'); color: theme('colors.onyx'); }
+    </style>
+</head>
+<body class="bg-onyx text-textDim font-sans antialiased text-base overflow-x-hidden">
+
+    <!-- ELITE TOP BAR -->
+    <div class="bg-charcoal text-champagne py-3 px-4 text-center text-xs md:text-sm font-sans tracking-[0.2em] uppercase border-b border-white/5 sticky top-0 z-50 backdrop-blur-xl bg-charcoal/80">
+        Antrean Klien Q3: <span class="text-white font-medium">Sisa 1 Kuota Proyek</span>
+    </div>
+
+    <!-- HERO PROSPECTUS - HIGH CONTRAST & FULL BLEED -->
+    <header class="relative min-h-[100svh] flex flex-col items-center justify-center pt-20 pb-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Bespoke Residential" class="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity">
+            <!-- Stronger gradient overlay to make text highly readable -->
+            <div class="absolute inset-0 bg-gradient-to-b from-onyx/80 via-onyx/70 to-onyx"></div>
+        </div>
+        
+        <!-- Glowing Orb behind text -->
+        <div class="glow-bg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-50"></div>
+
+        <div class="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center select-none w-full">
+            <div class="inline-block border border-champagne/30 text-champagne/90 rounded-full px-6 py-2 text-xs md:text-sm uppercase tracking-widest mb-10 backdrop-blur-sm">
+                Manifes Kesempurnaan Arsitektural
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-medium text-textBright mb-8 leading-[1.1] tracking-wide drop-shadow-2xl">
+                Waktu Anda Terlalu Berharga Untuk Bertoleransi Dengan <br class="hidden md:block"><i class="text-champagne font-light">Kesalahan Konstruksi.</i>
+            </h1>
+            
+            <p class="font-sans text-textBright/80 text-base md:text-xl font-light mb-12 max-w-3xl leading-relaxed md:leading-loose">
+                Kami adalah firma <em>Design & Build</em> bagi segelintir eksekutif yang menginginkan ekuilibrium antara fasad rumah memukau dan akurasi struktural mutlak. Anda membayar bukan sekadar untuk batu bata, tapi tingkat ketenangan pikiran yang tak tertandingi.
+            </p>
+
+            <a href="#eksplorasi" class="flex flex-col items-center text-champagne/60 hover:text-champagne transition duration-300">
+                <span class="text-xs uppercase tracking-widest mb-4">Eksplorasi Jurnal</span>
+                <div class="gold-line h-16 opacity-60"></div>
+            </a>
+        </div>
+    </header>
+
+    <!-- BENTO BOX SECTION: THE PROBLEM -->
+    <section id="eksplorasi" class="py-24 md:py-32 bg-onyx relative relative">
+        <!-- Decoration light -->
+        <div class="glow-bg top-0 right-0 w-[400px] h-[400px]"></div>
+
+        <div class="max-w-6xl mx-auto px-6 reveal relative z-10">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="font-serif text-3xl md:text-5xl text-textBright leading-tight mb-6">Membangun Rumah Adalah Seni,<br><span class="text-champagne italic">Bukan Membuka Lapangan Kerja Stres.</span></h2>
+                <p class="text-base md:text-lg text-textDim max-w-2xl mx-auto">Memiliki triliunan rupiah tidak menyelamatkan Anda dari kontraktor amatir. Permasalahan sesungguhnya di level Anda adalah kelangkaan <em>craftsmanship</em>.</p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]">
+                <!-- Large Featured Bento (Spans 2 columns on desktop) -->
+                <div class="bento-card p-8 md:p-12 md:col-span-2 flex flex-col justify-center bg-gradient-to-br from-charcoal to-onyx">
+                    <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mb-6 font-serif text-2xl italic">I</div>
+                    <h3 class="font-sans text-2xl md:text-3xl font-normal text-textBright mb-4">Kasus Marmer Cacat</h3>
+                    <p class="text-base md:text-lg text-textDim leading-relaxed">Berapa banyak direktur yang terpaksa turun tangan berteriak di lokasi menengahi perdebatan tukang karena lembaran Marmer <em>Statuario</em> Italia seharga ratusan juta dipotong dengan arah serat yang salah total?</p>
+                </div>
+
+                <!-- Small Bento 1 -->
+                <div class="bento-card p-8 md:p-10 flex flex-col justify-center">
+                    <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 font-serif text-2xl italic">II</div>
+                    <h3 class="font-sans text-xl md:text-2xl font-normal text-textBright mb-4">Integrasi Teknologi</h3>
+                    <p class="text-sm md:text-base text-textDim leading-relaxed">Instalasi kelistrikan 20.000 Watt konvensional akan selalu berakhir <em>korsleting</em> jika tak ada sinkronisasi desain dengan tim <em>Smart Home</em> dan AC Sentral.</p>
+                </div>
+
+                <!-- Small Bento 2 -->
+                <div class="bento-card p-8 md:p-10 flex flex-col justify-center">
+                    <div class="w-12 h-12 rounded-full bg-champagne/10 flex items-center justify-center text-champagne mb-6 font-serif text-2xl italic">III</div>
+                    <h3 class="font-sans text-xl md:text-2xl font-normal text-textBright mb-4">Pembengkakan Biaya</h3>
+                    <p class="text-sm md:text-base text-textDim leading-relaxed">Pemborong komersial sengaja memotong harga awal demi mengunci Anda, lalu mendadak menyodorkan nota <em>invoice tambahan</em> di tengah konstruksi putus asa.</p>
+                </div>
+
+                <!-- Large Bento Image (Spans 2 columns) -->
+                <div class="bento-card md:col-span-2 p-0 relative min-h-[300px] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern Interior" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-onyx via-transparent to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <h3 class="font-serif text-3xl text-textBright mb-2">Pencurian Atas Waktu Anda</h3>
+                        <p class="text-base text-textBright/70">Setiap telepon masalah teknis dari lapangan adalah invasi terhadap waktu produktif bisnis Anda yang bernilai jauh lebih besar dari margin bangunan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE DOCTRINE (Process / Principle) -->
+    <section class="py-24 md:py-32 bg-charcoal border-y border-white/5 relative">
+        <div class="max-w-6xl mx-auto px-6 reveal">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                
+                <div class="w-full md:w-5/12">
+                    <p class="text-champagne uppercase tracking-[0.2em] text-xs font-semibold mb-6">Metodologi Tertutup</p>
+                    <h2 class="font-serif text-4xl md:text-5xl mb-8 text-textBright leading-tight"><i>Single-Point</i> <br>of Accountability.</h2>
+                    <p class="font-sans text-textBright/80 text-base md:text-lg leading-relaxed mb-6">
+                        Sistem konstruksi pecah-belah telah usang. Kami membunuh budaya saling menyalahkan dengan mengunci seluruh disiplin ilmu (Arsitektur, Sipil, Mekanikal/Elektrikal) sebagai <strong>Satu Kesatuan Komando Mutlak</strong>.
+                    </p>
+                    <a href="#waitlist" class="inline-flex items-center text-champagne text-sm uppercase tracking-widest hover:text-white transition group border-b border-champagne pb-1">
+                        Baca Protokol Kerahasiaan 
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-2 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Process Steps Cards -->
+                <div class="w-full md:w-7/12 space-y-6">
+                    <div class="bento-card p-6 md:p-8 flex gap-6 items-start">
+                        <span class="text-3xl text-charcoal bg-champagne rounded-full w-12 h-12 flex items-center justify-center shrink-0 font-serif font-bold">1</span>
+                        <div>
+                            <h4 class="font-sans text-textBright font-medium text-lg md:text-xl mb-3">Artisan Presisi Laser</h4>
+                            <p class="text-sm md:text-base text-textDim leading-relaxed">Pelaksana lapangan kami bukan tukang harian jalanan. Kami menggunakan spesialis artisan. Jika di gambar 3D detail kisi memiliki rasio 4cm, ia wajib berdiri dengan presisi laser 4cm di lapangan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bento-card p-6 md:p-8 flex gap-6 items-start ml-0 md:ml-12 border-white/10 glow-champagne">
+                        <span class="text-3xl text-charcoal bg-champagne rounded-full w-12 h-12 flex items-center justify-center shrink-0 font-serif font-bold">2</span>
+                        <div>
+                            <h4 class="font-sans text-textBright font-medium text-lg md:text-xl mb-3">Kapasitas Finansial Absolut (Anti Over-Budget)</h4>
+                            <p class="text-sm md:text-base text-textDim leading-relaxed">Tagihan termin pembangunan kami yang dicetak ke Buku Notaris adalah <strong>Final Contract Price</strong>. Jika material baja dunia meroket esok hari, kerugian diserap oleh Margin Perusahaan kami, tidak akan mengganggu Anggaran Anda.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card p-6 md:p-8 flex gap-6 items-start">
+                        <span class="text-3xl text-charcoal bg-champagne rounded-full w-12 h-12 flex items-center justify-center shrink-0 font-serif font-bold">3</span>
+                        <div>
+                            <h4 class="font-sans text-textBright font-medium text-lg md:text-xl mb-3">Masa Retensi Berlian (90 Hari)</h4>
+                            <p class="text-sm md:text-base text-textDim leading-relaxed">Klausul Asuransi Internal pasca-serah terima: Garansi perlindungan Sipil, Atap Bocor, Retak Struktural secara agresif kami tangani penuh tanpa penagihan faktur sekecil apapun.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRINCIPAL ARCHITECT (Authority) -->
+    <section class="py-24 bg-onyx">
+        <div class="max-w-5xl mx-auto px-6 reveal">
+            <div class="bento-card flex flex-col md:flex-row overflow-hidden border-0 bg-charcoal">
+                <div class="md:w-5/12 h-full">
+                    <!-- Founder Image / Dummy Placeholder -->
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Principal Director" class="w-full h-[400px] md:h-full object-cover filter grayscale contrast-125">
+                </div>
+                <div class="md:w-7/12 p-10 md:p-16 flex flex-col justify-center relative">
+                    <svg class="absolute top-10 right-10 w-16 h-16 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+                    
+                    <p class="text-champagne uppercase tracking-[0.2em] text-xs font-semibold mb-4">Pesan Dari Principal Eksekutif</p>
+                    <h3 class="font-serif text-3xl md:text-4xl text-textBright mb-6 leading-tight">"Keindahan Arsitektur adalah dusta terbesar jika meneteskan air saat hujan malam."</h3>
+                    <p class="text-textDim text-sm md:text-base leading-relaxed mb-8">
+                        Itulah alasan PT Selaras Arsitektur berhenti melempar proyek ke pihak ketiga. Kami merancang. Kami mengimpor. Kami membangun dari nol baja akar. Anda menunjuk kami karena Anda membenci kompromi di segala lini.
+                    </p>
+                    <div>
+                        <p class="font-sans font-medium text-textBright text-lg">Ardhi R.</p>
+                        <p class="text-textDim text-sm">Managing Director, PT Selaras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES / TESTIMONIALS (Minimalist) -->
+    <section class="py-24 bg-onyx pt-0">
+        <div class="max-w-6xl mx-auto px-6 reveal">
+            <h2 class="font-sans text-xs md:text-sm tracking-[0.3em] uppercase text-textDim text-center mb-16">Distribusi Kepercayaan Klien Teratas</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bento-card p-10 bg-gradient-to-tl from-charcoal to-onyx border-white/5">
+                    <div class="flex mb-6">
+                        <span class="text-champagne text-2xl">★★★★★</span>
+                    </div>
+                    <p class="font-serif text-textBright text-xl md:text-2xl leading-relaxed mb-8 italic">"Saya sering ke London/Singapore dan tak ada waktu memantau tanah di Menteng. Selaras meletakkan seorang <em>Dedicated Concierge</em> yang melampirkan jurnal drone terstruktur tiap minggu. Eksekusi presisi sekelas Mandarin Oriental."</p>
+                    <p class="text-champagne text-xs md:text-sm tracking-widest uppercase">David W. — C-Level Executive (Menteng Residence)</p>
+                </div>
+
+                <div class="bento-card p-10 bg-gradient-to-bl from-charcoal to-onyx border-white/5">
+                    <div class="flex mb-6">
+                        <span class="text-champagne text-2xl">★★★★★</span>
+                    </div>
+                    <p class="font-serif text-textBright text-xl md:text-2xl leading-relaxed mb-8 italic">"Tiga bulan sejak dihuni, faucet sensor di wastafel utama macet. HANYA DALAM 4 JAM pasca saya komplain WA, teknisi mereka tiba mengganti utuh secara gratis berkat klausul Garansi 90 Hari yang kuat."</p>
+                    <p class="text-champagne text-xs md:text-sm tracking-widest uppercase">dr. Amelia K., Sp.A — Private Domain (Pondok Indah)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SNOB/EXCLUSIVE FILTER & CTA (Pre-qualifying) -->
+    <section id="waitlist" class="py-32 bg-charcoal border-t border-white/10 text-center relative overflow-hidden">
+        <div class="glow-bg bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] opacity-30"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 reveal relative z-10">
+            <div class="inline-block bg-champagne/10 text-champagne border border-champagne/20 rounded-full px-6 py-2 text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] font-medium mb-10">
+                Layanan Private Audiences (Level-A)
+            </div>
+            
+            <h2 class="font-serif text-4xl md:text-6xl text-textBright mb-10 leading-tight">Ruang Terbatas Untuk <br><i class="text-champagne">Mahakarya Konstruksi.</i></h2>
+            
+            <p class="text-base md:text-xl text-textDim font-light leading-relaxed mb-16 max-w-3xl mx-auto">
+                Untuk mencegah terpecahnya konsentrasi Insinyur Utama kami, PT Selaras Arsitektur <strong class="text-textBright font-normal">membekukan maksimum kuota proyek tiap kuartal</strong>. Jika Anda sekadar mencari vendor termurah dengan toleransi pemotongan kelas material, kami memohon undur diri lebih awal. <br><br>Namun, jika ketenangan pikiran mutlak dan keindahan absolut adalah bahasa Anda, mari jadwalkan pertemuan terbatas.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
+                <!-- Extremely elegant button with deep modern shadow -->
+                <a href="https://wa.me/6281234567890?text=Selamat%20Siang%20Selaras,%20saya%20tertarik%20mengajukan%20permohonan%20audiensi%20terkait%20konstruksi%20Rumah%20Tinggal%20Bespoke." target="_blank" class="w-full sm:w-auto text-center px-10 py-5 bg-textBright text-onyx font-sans text-sm md:text-base font-semibold uppercase tracking-widest hover:bg-champagne transition-colors duration-300 rounded-sm shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(211,184,136,0.3)]">
+                    Jadwalkan Private Audiences
+                </a>
+            </div>
+            
+            <div class="flex items-center justify-center gap-2 text-textDim text-xs md:text-sm font-medium tracking-wide">
+                <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                Dilindungi Sistem Kontrak NDA (<em>Non-Disclosure Agreement</em>)
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-onyx py-16 text-center px-6 border-t border-white/5">
+        <h4 class="font-serif text-2xl text-textBright tracking-[0.3em] md:tracking-widest mb-6">SELARAS</h4>
+        <p class="font-sans text-textDim/50 text-[10px] md:text-xs uppercase tracking-[0.1em] md:tracking-[0.2em] max-w-2xl mx-auto leading-relaxed">
+            Copyright &copy; 2026 PT Selaras Arsitektur Indonesia. Executive Domain.<br class="hidden md:block">Dilarang menyalin manuskrip jurnal intelektual ini tanpa otoritas tertulis.
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50; 
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>

@@ -237,6 +237,29 @@
             document.getElementById('project-desc-1').textContent = "Proyek ini berfokus pada modernisasi fasad rumah lama menjadi tampilan minimalis kontemporer yang bersih. Kami menambahkan sistem atap tambahan untuk area balkon belakang.";
             document.getElementById('project-desc-2').textContent = "Pengerjaan mencakup penggantian material eksterior menjadi kombinasi semen ekspos dan aksen metal, memberikan karakter yang lebih maskulin dan low-maintenance.";
         }
+
+        // Tracking Logic
+        const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxeGnESRqrA6mqb3jw0G8hgpKUoKSWuljvOoyrL5On3rOSAhK8yCgTeAMwccg5-MoxJjw/exec";
+        const startTime = Date.now();
+        const projectName = project === 'minimalist' ? 'Minimalist Home' : 'Modern Tropical';
+
+        // Send tracking data when page is hidden/closed
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                const duration = Math.round((Date.now() - startTime) / 1000);
+                if (duration > 1) { // Only track if more than 1 sec to avoid noise
+                    fetch(TRACKING_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        body: JSON.stringify({ 
+                            project: projectName, 
+                            action: 'view_duration', 
+                            duration: duration 
+                        })
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html>

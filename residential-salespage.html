@@ -51,7 +51,7 @@
         }
 
         .gradient-overlay {
-            background: linear-gradient(to top, rgba(38, 51, 44, 0.95) 0%, rgba(38, 51, 44, 0.5) 60%, rgba(38, 51, 44, 0.1) 100%);
+            background: linear-gradient(to top, rgba(13, 27, 23, 0.95) 10%, rgba(13, 27, 23, 0.6) 50%, rgba(13, 27, 23, 0.3) 100%);
         }
     </style>
 </head>
@@ -59,21 +59,23 @@
 
     <!-- TOP ANNOUNCEMENT -->
     <div class="bg-family-forest text-family-cream py-2 text-center text-[9px] md:text-sm tracking-widest uppercase font-light">
-        Melayani Rancang Bangun Area Jabodetabek & Jawa Barat
+        Melayani Design & Build, Interior, & Custom Furnitur
     </div>
 
     <!-- NAVBAR (Responsive fixes: Make button visible on mobile but smaller) -->
     <nav class="absolute w-full z-50 py-4 md:py-6">
         <div class="max-w-6xl mx-auto px-4 md:px-6 flex justify-between items-center">
-            <span class="font-serif font-bold text-xl md:text-2xl tracking-widest text-white drop-shadow-md">SELARAS</span>
+            <a href="/" class="block">
+                <img src="selaras-logo.webp" alt="Sangga Citra Selaras" class="h-8 md:h-11 w-auto object-contain drop-shadow-md">
+            </a>
             <a href="#konsultasi" class="inline-block border border-white/40 text-white text-[10px] md:text-xs uppercase tracking-widest px-3 py-2 md:px-6 md:py-3 hover:bg-white/10 transition-colors backdrop-blur-sm">
-                Chat Arsitek
+                Hubungi Kami
             </a>
         </div>
     </nav>
 
     <!-- HERO / CASE STUDY HOOK (Responsive fixes: min-h-svh for proper mobile height, text sizing, padding bottom) -->
-    <header class="relative min-h-[100svh] md:min-h-[90vh] flex flex-col justify-end pt-24 pb-12 md:pb-24 bg-family-forest">
+    <header class="relative min-h-[100svh] md:min-h-[90vh] flex flex-col justify-center md:justify-end pt-24 pb-12 md:pb-24 bg-family-forest">
         <!-- GAMBAR NC HOUSE DARI USER -->
         <!-- <img src="28.png" alt="NC House Project" class="absolute inset-0 w-full h-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'"> -->
 
@@ -82,26 +84,27 @@
         
         <div class="absolute inset-0 gradient-overlay"></div>
         
-        <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6 w-full mt-auto">
+        <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6 w-full md:mt-auto">
             <div class="animate-fade-in-up max-w-3xl">
                 <!-- Project Status Tag -->
-                <div class="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5 md:px-4 md:py-1.5 mb-4 md:mb-6">
+                <!-- <div class="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5 md:px-4 md:py-1.5 mb-4 md:mb-6">
                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0"></span>
                     <span class="text-white text-[9px] md:text-xs uppercase tracking-widest">Ongoing Project: NC House Jatiasih, Bekasi (2025)</span>
-                </div>
+                </div> -->
                 
                 <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-[1.15] drop-shadow-lg">
-                    Kami Tidak Sekadar Menggambar. <br>
-                    <span class="italic text-family-wood">Kami Mewujudkannya Secara Fisik.</span>
+                    Membangun Rumah <br>
+                    <span class="italic text-[#FFE451]">Seharusnya Jelas Sejak Awal.</span>
                 </h1>
                 
                 <p class="text-family-cream opacity-90 text-sm sm:text-base md:text-xl font-light mb-8 max-w-2xl leading-relaxed drop-shadow-md">
-                    Sistem <i>Design & Build</i> satu-pintu. Wujudkan fasad elegan dan interior premium rumah keluarga Anda tanpa drama tukang kabur atau biaya siluman membengkak.
+                    Sangga Citra Selaras menangani <i>design & build</i> secara menyeluruh, mulai dari perencanaan, konstruksi, hingga interior dan custom furnitur.
+Setiap tahap terukur, setiap biaya dapat dijelaskan, dan setiap hasil dapat dipertanggungjawabkan.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
                     <a href="#konsultasi" class="inline-flex items-center justify-center bg-family-wood text-white uppercase tracking-widest text-[11px] md:text-sm font-semibold px-6 py-3.5 md:px-8 md:py-4 hover:bg-[#a17043] transition-colors shadow-lg">
-                        Konsultasi Denah (Gratis)
+                        Mulai Konsultasi Privat
                     </a>
                 </div>
             </div>
@@ -112,28 +115,29 @@
     <section class="py-16 md:py-28 bg-family-cream">
         <div class="max-w-5xl mx-auto px-4 md:px-6 reveal">
             <div class="text-center mb-10 md:mb-16">
-                <h2 class="font-serif text-2xl md:text-4xl text-family-forest mb-4 leading-snug">Sebuah Perjalanan yang Seharusnya Menyenangkan, <br class="hidden md:block"><span class="italic text-family-wood">Bukan Membuat Anda Stres.</span></h2>
-                <p class="text-family-sage text-sm md:text-base max-w-2xl mx-auto">Kami sering mendengarkan keluh kesah klien yang berpindah ke Selaras karena trauma dengan sistem pemborong lepasan.</p>
+                <h2 class="font-serif text-2xl md:text-4xl text-family-forest mb-4 leading-snug">Proses yang Seharusnya Terencana, <br class="hidden md:block"><span class="italic text-family-wood">Sering Berubah Jadi Beban.</span></h2>
+                <p class="text-family-sage text-sm md:text-base max-w-2xl mx-auto">Tanpa sistem yang selaras, banyak proyek berjalan dengan ketidakjelasan, menyebabkan biaya membengkak dan hasil yang tidak sesuai harapan.
+</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Point 1 -->
                 <div class="bg-white p-6 md:p-8 shadow-sm border-t-4 border-red-800/20">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-red-50 text-red-800 rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-4 md:mb-6">X</div>
-                    <h3 class="font-sans font-semibold text-lg md:text-xl mb-2 md:mb-3 text-family-forest">Desain vs Realita Berbeda</h3>
-                    <p class="text-xs md:text-sm text-family-gray leading-relaxed">Arsitek memberikan gambar 3D yang sangat indah, tapi kontraktor tidak mampu membaca gambar strukturalnya. Hasil akhirnya melenceng dan terlihat murah.</p>
+                    <h3 class="font-sans font-semibold text-lg md:text-xl mb-2 md:mb-3 text-family-forest">Desain Tidak Terarah</h3>
+                    <p class="text-xs md:text-sm text-family-gray leading-relaxed">Perencanaan yang tidak matang membuat hasil akhir tidak sesuai ekspektasi dan sering berubah di tengah proses.</p>
                 </div>
                 <!-- Point 2 -->
                 <div class="bg-white p-6 md:p-8 shadow-sm border-t-4 border-red-800/20">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-red-50 text-red-800 rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-4 md:mb-6">X</div>
-                    <h3 class="font-sans font-semibold text-lg md:text-xl mb-2 md:mb-3 text-family-forest">Biaya Siluman <em>Overbudget</em></h3>
-                    <p class="text-xs md:text-sm text-family-gray leading-relaxed">Mandor mematok harga sangat murah di awal agar Anda tergiur. Di tengah jalan, material sering habis dan Anda disuruh beli ini-itu hingga membengkak jauh dari RAB asli.</p>
+                    <h3 class="font-sans font-semibold text-lg md:text-xl mb-2 md:mb-3 text-family-forest">Biaya Tidak Terkendali</h3>
+                    <p class="text-xs md:text-sm text-family-gray leading-relaxed">Minimnya transparansi menyebabkan anggaran terus bertambah tanpa kejelasan yang bisa dipertanggungjawabkan.</p>
                 </div>
                 <!-- Point 3 -->
                 <div class="bg-white p-6 md:p-8 shadow-sm border-t-4 border-red-800/20">
                     <div class="w-10 h-10 md:w-12 md:h-12 bg-red-50 text-red-800 rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-4 md:mb-6">X</div>
-                    <h3 class="font-sans font-semibold text-lg md:text-xl mb-2 md:mb-3 text-family-forest">Ditinggal Lepas Tangan</h3>
-                    <p class="text-xs md:text-sm text-family-gray leading-relaxed">Pembangunan belum selesai 100%, tapi mandor/tukang mulai susah dihubungi. Baru sebulan ditempati, atap bocor atau dinding retak, dan tidak ada yang mau bertanggung jawab.</p>
+                    <h3 class="font-sans font-semibold text-lg md:text-xl mb-2 md:mb-3 text-family-forest">Pekerjaan Tidak Konsisten</h3>
+                    <p class="text-xs md:text-sm text-family-gray leading-relaxed">Koordinasi yang tidak terintegrasi membuat kualitas dan timeline proyek sulit dijaga.</p>
                 </div>
             </div>
         </div>
@@ -145,24 +149,24 @@
             <!-- Teks Solusi -->
             <div class="lg:w-1/2 order-2 lg:order-1">
                 <p class="text-family-wood uppercase tracking-widest text-[9px] md:text-[10px] font-bold mb-3 md:mb-4">Mitra Konstruksi Satu Pintu</p>
-                <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl mb-4 md:mb-6 text-family-forest leading-tight">Solusi Eksekusi Cerdas: <br>Mulai Sketsa Hingga Serah Terima.</h2>
+                <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl mb-4 md:mb-6 text-family-forest leading-tight">Pendekatan Terstruktur untuk Hasil yang Pasti</h2>
                 <p class="text-family-sage text-sm md:text-lg font-light leading-relaxed mb-6 md:mb-10">
-                    Sistem <b>Design & Build</b> Selaras menghubungkan meja gambar arsitek langsung dengan tim pelaksana lapangan kami di bawah satu atap manajemen tanpa vendor asing.
+                    Kami mengerjakan setiap proyek dengan sistem <b>design & build</b> terintegrasi, memastikan seluruh proses berjalan terarah, efisien, dan terkendali dari awal hingga akhir.
                 </p>
 
                 <ul class="space-y-4 md:space-y-6">
                     <li class="flex gap-3 md:gap-4 items-start">
                         <svg class="w-5 h-5 md:w-6 md:h-6 text-family-wood shrink-0 mt-0.5 md:mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         <div>
-                            <h4 class="font-semibold text-base md:text-lg text-family-forest mb-1">Realitas Presisi 99%</h4>
-                            <p class="text-xs md:text-sm text-family-gray leading-relaxed">Tim lapangan dibimbing langsung oleh arsitek konsep Anda. Fasad di render 3D akan terwujud persis ke batu, kayu, dan beton di dunia nyata.</p>
+                            <h4 class="font-semibold text-base md:text-lg text-family-forest mb-1">Perencanaan Presisi Sejak Awal</h4>
+                            <p class="text-xs md:text-sm text-family-gray leading-relaxed">Setiap proyek dimulai dengan perhitungan matang, mulai dari konsep desain, kebutuhan ruang, hingga estimasi biaya yang realistis.</p>
                         </div>
                     </li>
                     <li class="flex gap-3 md:gap-4 items-start">
                         <svg class="w-5 h-5 md:w-6 md:h-6 text-family-wood shrink-0 mt-0.5 md:mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         <div>
-                            <h4 class="font-semibold text-base md:text-lg text-family-forest mb-1">RAB Jujur Pasti & Mengikat</h4>
-                            <p class="text-xs md:text-sm text-family-gray leading-relaxed">Tagihan termyn diikat kontrak hukum jelas. Tiap material tertulis serinya. Tanggung jawab kami memastikan tidak ada kata "over-budget" akibat kelemahan spekulasi tukang lepas.</p>
+                            <h4 class="font-semibold text-base md:text-lg text-family-forest mb-1">Kontrol Anggaran yang Jelas</h4>
+                            <p class="text-xs md:text-sm text-family-gray leading-relaxed">Kami menyusun anggaran secara transparan dan detail, sehingga Anda memahami sepenuhnya ke mana setiap biaya dialokasikan.</p>
                         </div>
                     </li>
                 </ul>
@@ -173,8 +177,8 @@
                 <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Konstruksi Rumah" class="w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] object-cover shadow-lg rounded-sm">
                 <!-- Badge (Hidden on very tiny mobile, block everywhere else) -->
                 <div class="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-6 bg-family-forest text-white p-4 md:p-6 shadow-xl hidden sm:block">
-                    <p class="font-sans font-bold text-lg md:text-2xl">Standardisasi Korporasi</p>
-                    <p class="text-[8px] md:text-[10px] uppercase tracking-widest mt-1 md:mt-2 opacity-80">Pelaksanaan & Pengawasan Konstruksi</p>
+                    <p class="font-sans font-bold text-lg md:text-2xl">Standarisasi Konstruksi</p>
+                    <p class="text-[8px] md:text-[10px] uppercase tracking-widest mt-1 md:mt-2 opacity-80">Setiap pekerjaan mengikuti standar teknis yang konsisten untuk menjaga kualitas dan ketahanan bangunan.</p>
                 </div>
             </div>
         </div>
@@ -188,19 +192,20 @@
                 <div class="md:w-2/3">
                     <svg class="w-8 h-8 md:w-10 md:h-10 text-family-wood mb-4 md:mb-6 opacity-50 mx-auto md:mx-0" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                     <h2 class="font-serif text-xl sm:text-2xl md:text-4xl mb-4 md:mb-6 leading-snug">
-                        "Membangun rumah keluarga itu tentang merawat memori dan harapan. Bukan sekadar menumpuk beton bata."
+                        "Membangun rumah bukan sekadar proyek konstruksi.
+Ini tentang menghadirkan ruang yang selaras antara fungsi, estetika, dan kebutuhan hidup."
                     </h2>
                     <p class="text-family-cream/80 font-light text-sm md:text-base leading-relaxed mb-6 md:mb-8">
-                        Filosofi ini yang membuat kami turun tangan langsung pada detail terkecil. Kami sangat paham, sirkulasi dapur yang matang dan kamar tidur yang hangat adalah tempat memori terbaik anak-anak Anda akan tercipta puluhan tahun ke depan. Biarkan bagian teknis pusingnya kami yang menangani seratus persen.
+                        Kami percaya bahwa rumah yang baik dibangun melalui proses yang terencana, transparan, dan dapat dipertanggungjawabkan, bukan sekadar hasil akhir yang terlihat baik.
                     </p>
-                    <div>
+                    <!-- <div>
                         <div class="font-sans font-bold tracking-wide uppercase text-xs md:text-sm text-family-wood">
                             Raditya M. Selaras, S.T., IAI
                         </div>
                         <div class="text-[10px] md:text-xs text-family-cream/60 mt-1">
                             Principal Architect & Founder
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Foto Founder (Width dibatasi di mobile agar tidak makan 1 layar full) -->
@@ -214,9 +219,9 @@
     <!-- THE ULTIMATE TRUST FEATURE: RETENSI 3 BULAN -->
     <section class="py-16 md:py-20 bg-[#fbfbfb] border-y border-gray-200">
         <div class="max-w-4xl mx-auto px-4 md:px-6 reveal text-center">
-            <h2 class="font-serif text-2xl md:text-4xl text-family-forest mb-4 md:mb-6">Garansi Masa Retensi Konstruksi Penuh Selama 3 Bulan</h2>
+            <h2 class="font-serif text-2xl md:text-4xl text-family-forest mb-4 md:mb-6">Garansi Masa Retensi Konstruksi Selama 3 Bulan</h2>
             <p class="text-family-sage mb-8 md:mb-10 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                Kami berani meyakini presisi kualitas teknis (Sipil struktural tegangan, Plumbing, & Kemiringan Atap) yang kami bangun. Oleh sebab itu, Anda dilindungi jaminan eksklusif mutlak pasca-serah terima.
+                Kami memastikan setiap hasil pekerjaan tetap dalam kondisi optimal setelah serah terima, sebagai bentuk tanggung jawab kami terhadap kualitas.
             </p>
             
             <div class="bg-white p-6 md:p-12 border border-gray-100 shadow-xl rounded-lg mx-auto">
@@ -225,9 +230,9 @@
                         <svg class="w-8 h-8 md:w-10 md:h-10 text-family-wood" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
                 </div>
-                <h3 class="font-sans font-semibold text-xl md:text-2xl text-family-forest mb-3 md:mb-4">Garansi <em>Stress-Free</em> Selaras</h3>
-                <p class="text-xs md:text-sm text-family-gray leading-relaxed mb-6 md:mb-8 text-left md:text-center">Jika dalam rentang waktu <strong>3 Bulan (90 Hari)</strong> pertama Anda menempati rumah terjadi kendala darurat spesifik bangunan seperti atap rembes genangan hujan, retak rambut plester struktural berlebih, atau mampetnya drainase <em>plumbing</em>, tim teknis kami akan langsung menurunkannya. Diperbaiki <strong>100% Gratis</strong> tanpa tarif siluman material perbaikan.</p>
-                <div class="inline-block bg-family-cream px-4 md:px-6 py-2 rounded-full border border-family-wood/20 text-[9px] md:text-xs font-bold text-family-wood tracking-widest uppercase">Valid Berpayung Hukum Notaris</div>
+                <h3 class="font-sans font-semibold text-xl md:text-2xl text-family-forest mb-3 md:mb-4">Garansi Konstruksi <em>Sangga Citra Selaras</em></h3>
+                <p class="text-xs md:text-sm text-family-gray leading-relaxed mb-6 md:mb-8 text-left md:text-center">Jika terdapat penyesuaian minor setelah proyek selesai, tim kami siap melakukan perbaikan sesuai ruang lingkup yang disepakati, tanpa proses yang berbelit.</p>
+                <div class="inline-block bg-family-cream px-4 md:px-6 py-2 rounded-full border border-family-wood/20 text-[9px] md:text-xs font-bold text-family-wood tracking-widest uppercase">NIB-0705250007532</div>
             </div>
         </div>
     </section>
@@ -236,13 +241,13 @@
     <section class="py-16 md:py-24 bg-white" id="portfolio">
         <div class="max-w-6xl mx-auto px-4 md:px-6 reveal">
             <div class="text-center mb-10 md:mb-16">
-                <h2 class="font-serif text-2xl md:text-4xl text-family-forest mb-3 md:mb-4">Pengalaman Residensial Visual Lainnya</h2>
+                <h2 class="font-serif text-2xl md:text-4xl text-family-forest mb-3 md:mb-4">Beberapa Proyek yang Telah Kami Kerjakan</h2>
                 <div class="w-12 md:w-16 h-1 w-px bg-family-wood mx-auto"></div>
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                 <!-- Proyek 1 -->
-                <div class="group cursor-pointer">
+                <a href="project-detail.html?project=modern-tropical" class="group cursor-pointer block">
                     <div class="overflow-hidden bg-family-cream aspect-[4/3] rounded-sm mb-3 md:mb-4">
                         <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Rumah Modern">
                     </div>
@@ -251,10 +256,13 @@
                             <h3 class="font-serif text-lg md:text-xl font-medium text-family-forest leading-snug">Modern Tropical Residence, BSD City</h3>
                             <p class="text-[10px] md:text-xs text-family-gray mt-1 uppercase tracking-wider">Desain & Sipil Keseluruhan</p>
                         </div>
+                        <div class="text-family-wood opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <!-- Proyek 2 -->
-                <div class="group cursor-pointer mt-4 sm:mt-0">
+                <a href="project-detail.html?project=minimalist" class="group cursor-pointer mt-4 sm:mt-0 block">
                     <div class="overflow-hidden bg-family-cream aspect-[4/3] rounded-sm mb-3 md:mb-4">
                         <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Rumah Minimalis">
                     </div>
@@ -263,8 +271,11 @@
                             <h3 class="font-serif text-lg md:text-xl font-medium text-family-forest leading-snug">Contemporary Minimalist Home, Cibubur</h3>
                             <p class="text-[10px] md:text-xs text-family-gray mt-1 uppercase tracking-wider">Fasad Renovation & Ekstensi Atap</p>
                         </div>
+                        <div class="text-family-wood opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -277,15 +288,15 @@
         
         <div class="max-w-4xl mx-auto px-4 md:px-6 text-center reveal relative z-10 text-white">
             <p class="text-family-wood uppercase tracking-widest text-[9px] md:text-[10px] font-bold mb-3 md:mb-4">Terbatas Sisa Plot Jadwal</p>
-            <h2 class="font-serif text-2xl md:text-5xl mb-4 md:mb-6 leading-tight">Siap Membedah Anggaran Lahan Kavling Anda Secara Rasional?</h2>
+            <h2 class="font-serif text-2xl md:text-5xl mb-4 md:mb-6 leading-tight">Bangun Rumah Anda dengan Perencanaan yang Jelas</h2>
             <p class="text-family-cream/80 leading-relaxed mb-8 md:mb-10 text-sm md:text-base max-w-2xl mx-auto">
-                Silakan reservasi slot waktu konsultasi eksklusif dengan arsitek lapangan kami. Sampaikan kebutuhan tata ruang unik keluarga (Tema Etnik Modern, Tropis Ekstra, dll), dan mari diskusikan kesesuaian anggarannya tanpa bumbu manis mandor jalanan.<br><br>
-                <strong class="text-white font-medium text-xs md:text-sm">Bebas survei lokasi awal area se-Jabodetabek terbatas bagi klien yang serius.</strong>
+                Diskusikan kebutuhan Anda bersama tim kami untuk mendapatkan gambaran konsep, estimasi biaya, dan langkah kerja yang terstruktur sejak awal.<br><br>
+                <!-- <strong class="text-white font-medium text-xs md:text-sm">Bebas survei lokasi awal area se-Jabodetabek terbatas bagi klien yang serius.</strong> -->
             </p>
 
-            <a href="https://wa.me/6281234567890?text=Halo%20Selaras,%20saya%20berminat%20membangun/merenovasi%20rumah%20tinggal%20dengan%20sistem%20Design%20&%20Build.%20Saya%20ingin%20jadwalkan%20konsultasi." target="_blank" class="block w-full sm:inline-flex items-center justify-center gap-2 md:gap-3 bg-[#25D366] text-white uppercase tracking-widest text-xs md:text-sm font-bold px-6 py-4 md:px-10 md:py-5 hover:bg-[#20bd5a] transition-all shadow-xl shadow-[#25D366]/20 shadow rounded-sm">
+            <a href="https://wa.me/628551266611?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Sangga%20Citra%20Selaras.%0A%0ASaya%20berencana%20untuk%20%5Bbangun%20baru%20%2F%20renovasi%20%2F%20interior%20%2F%20custom%20furnitur%5D%20di%20area%20%5Blokasi%5D.%0AEstimasi%20luas%20proyek%20sekitar%20%5B_%5D%20m%C2%B2.%0A%0AUntuk%20konsep%2C%20saya%20menginginkan%20%5Bgaya%20%2F%20referensi%2C%20jika%20ada%5D.%0ATarget%20pengerjaan%20diharapkan%20mulai%20sekitar%20%5Bwaktu%5D.%0A%0AMohon%20arahan%20untuk%20langkah%20selanjutnya.%20Terima%20kasih." target="_blank" class="block w-full sm:inline-flex items-center justify-center gap-2 md:gap-3 bg-[#25D366] text-white uppercase tracking-widest text-xs md:text-sm font-bold px-6 py-4 md:px-10 md:py-5 hover:bg-[#20bd5a] transition-all shadow-xl shadow-[#25D366]/20 shadow rounded-sm">
                 <svg class="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Konsultasikan Rencana Rumah Anda Sekarang
+                Konsultasikan Kebutuhan Anda Sekarang
             </a>
         </div>
     </section>

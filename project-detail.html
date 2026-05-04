@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek | Sangga Citra Selaras</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'family-forest': '#1a2620',
+                        'family-wood': '#a67c52',
+                        'family-sage': '#4a5d51',
+                        'family-cream': '#fdfcf8',
+                        'family-gray': '#6a6a6a',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'heading': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .carousel-container {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+            flex: 0 0 100%;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Lock height for desktop to fit screen comfortably */
+        @media (min-width: 1024px) {
+            .carousel-height {
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-family-cream text-family-forest font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <button onclick="history.back()" class="flex items-center gap-2 text-family-forest hover:text-family-wood transition-colors group">
+                <svg class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="font-medium">Kembali</span>
+            </button>
+            <img src="selaras-logo.webp" alt="Logo" class="h-8 w-auto">
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="#section-desain" class="text-xs uppercase tracking-widest font-bold hover:text-family-wood transition-colors">Visualisasi Desain</a>
+                <a href="#section-hasil" class="text-xs uppercase tracking-widest font-bold hover:text-family-wood transition-colors">Hasil Akhir</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+        <!-- Project Title Header -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-end">
+            <div>
+                <p id="project-category" class="text-family-wood uppercase tracking-[0.2em] text-[10px] font-bold mb-3">Desain & Sipil Keseluruhan</p>
+                <h1 id="project-title" class="font-serif text-3xl md:text-5xl leading-tight">Modern Tropical Residence</h1>
+                <p id="project-location" class="text-family-sage text-base md:text-lg font-light italic mt-2">BSD City, Tangerang Selatan</p>
+            </div>
+            <div class="flex lg:justify-end gap-x-8 text-xs uppercase tracking-widest border-l lg:border-l-0 lg:border-r border-family-wood/30 pl-4 lg:pr-4">
+                <div>
+                    <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Luas Bangunan</span>
+                    <span class="font-bold">320 m²</span>
+                </div>
+                <div>
+                    <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Tahun</span>
+                    <span class="font-bold">2024</span>
+                </div>
+                <div>
+                    <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Status</span>
+                    <span class="font-bold text-green-700">Selesai 100%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TWO SLIDERS SECTION (Side-by-side on Large Desktop, Stacked on others) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+            
+            <!-- SECTION 1: DESAIN -->
+            <div id="section-desain" class="space-y-4">
+                <div class="flex justify-between items-center px-1">
+                    <h2 class="font-heading font-bold text-xs uppercase tracking-widest text-family-wood">01. Visualisasi Desain (3D)</h2>
+                    <span class="text-[10px] text-family-gray italic">Rencana Awal</span>
+                </div>
+                <div class="relative group">
+                    <div id="carousel-desain" class="carousel-container flex overflow-x-auto hide-scrollbar rounded-lg shadow-xl bg-black carousel-height aspect-video lg:aspect-auto">
+                        <div class="carousel-item relative">
+                            <img src="https://images.unsplash.com/photo-1600607687940-477a128f198e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-90" alt="Design 1">
+                        </div>
+                        <div class="carousel-item relative">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-90" alt="Design 2">
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <div class="absolute inset-y-0 left-0 flex items-center p-2">
+                        <button onclick="prevSlide('desain')" class="bg-black/30 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center p-2">
+                        <button onclick="nextSlide('desain')" class="bg-black/30 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: HASIL -->
+            <div id="section-hasil" class="space-y-4">
+                <div class="flex justify-between items-center px-1">
+                    <h2 class="font-heading font-bold text-xs uppercase tracking-widest text-family-wood">02. Hasil Akhir (Konstruksi)</h2>
+                    <span class="text-[10px] text-green-700 font-bold uppercase tracking-tight">Realita Unit</span>
+                </div>
+                <div class="relative group">
+                    <div id="carousel-hasil" class="carousel-container flex overflow-x-auto hide-scrollbar rounded-lg shadow-xl bg-black carousel-height aspect-video lg:aspect-auto">
+                        <div class="carousel-item relative">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Result 1">
+                        </div>
+                        <div class="carousel-item relative">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Result 2">
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <div class="absolute inset-y-0 left-0 flex items-center p-2">
+                        <button onclick="prevSlide('hasil')" class="bg-black/30 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center p-2">
+                        <button onclick="nextSlide('hasil')" class="bg-black/30 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About Project -->
+        <div class="bg-white p-6 md:p-10 rounded-lg shadow-sm border border-gray-100 max-w-4xl mx-auto">
+            <h3 class="font-serif text-2xl mb-4 text-center">Narasi Konsep</h3>
+            <p class="text-family-sage text-center font-light leading-relaxed mb-0">
+                Memadukan unsur tropis dengan geometri modern yang tegas. Selaras Studio memastikan setiap modul material, mulai dari fasad hingga interior, dikerjakan dengan presisi tinggi di pabrik sebelum dipasang secara modular di lokasi untuk hasil yang tanpa cacat.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-family-forest text-family-cream py-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="selaras-logo.webp" alt="Logo" class="h-6 w-auto mx-auto mb-4 opacity-70 brightness-200">
+            <p class="text-[10px] opacity-40 uppercase tracking-widest font-bold">Sangga Citra Selaras — Mitra Design & Build Anda</p>
+        </div>
+    </footer>
+
+    <script>
+        const carousels = {
+            'desain': {
+                el: document.getElementById('carousel-desain'),
+                index: 0
+            },
+            'hasil': {
+                el: document.getElementById('carousel-hasil'),
+                index: 0
+            }
+        };
+
+        function scrollToSlide(id, index) {
+            const data = carousels[id];
+            const items = data.el.querySelectorAll('.carousel-item');
+            data.index = (index + items.length) % items.length;
+            
+            data.el.scrollTo({
+                left: data.el.offsetWidth * data.index,
+                behavior: 'smooth'
+            });
+        }
+
+        function nextSlide(id) {
+            scrollToSlide(id, carousels[id].index + 1);
+        }
+
+        function prevSlide(id) {
+            scrollToSlide(id, carousels[id].index - 1);
+        }
+
+        // Synchronized Auto-Scroll
+        setInterval(() => {
+            nextSlide('desain');
+            nextSlide('hasil');
+        }, 6000);
+
+        // Simple sync for manual scroll
+        /*
+        carousels.desain.el.addEventListener('scroll', () => {
+            const index = Math.round(carousels.desain.el.scrollLeft / carousels.desain.el.offsetWidth);
+            if (index !== carousels.desain.index) {
+                carousels.desain.index = index;
+                // Optional: sync both? 
+            }
+        });
+        */
+
+        // Handle URL parameters for title updates
+        const params = new URLSearchParams(window.location.search);
+        const project = params.get('project');
+        if (project === 'minimalist') {
+            document.getElementById('project-title').textContent = "Contemporary Minimalist Home";
+            document.getElementById('project-location').textContent = "Cibubur, Jakarta Timur";
+            document.getElementById('project-category').textContent = "Fasad Renovation & Ekstensi Atap";
+        }
+    </script>
+</body>
+</html>

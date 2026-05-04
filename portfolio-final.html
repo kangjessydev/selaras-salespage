@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Karya | Selaras Arsitektur</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Katalog pameran karya arsitektur eksklusif PT Selaras. Jelajahi 87 desain rumah, villa, dan area komersial.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #0c0c0c;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; 
+        }
+        
+        /* 
+         * MOBILE CONFIGURATION: VERTICAL SCROLL SNAP (Reels Style)
+         */
+        .scroll-container {
+            height: 100vh;
+            width: 100vw;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory; 
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            display: block;
+        }
+        .scroll-container::-webkit-scrollbar { display: none; }
+
+        .project-section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start; 
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #0c0c0c;
+        }
+
+        .bg-blur {
+            position: absolute;
+            top: -10%; left: -10%; right: -10%; bottom: -10%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(50px) brightness(0.2); 
+            z-index: 1;
+        }
+
+        .poster-image {
+            position: relative;
+            z-index: 10;
+            max-height: 85vh; 
+            max-width: 90vw;
+            object-fit: contain; 
+            box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.9);
+            border-radius: 6px; 
+            transition: transform 0.4s ease;
+        }
+
+        /* 
+         * DESKTOP CONFIGURATION: HORIZONTAL GALLERY (Art Exhibition Style)
+         * - Aktif jika layar > 768px (Tablet Horizontal / Desktop)
+         */
+        @media (min-width: 768px) {
+            .scroll-container {
+                display: flex; /* Berjajar ke samping */
+                flex-direction: row;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory; 
+                padding: 0 10vw; /* Memberi ruang di ujung awal dan akhir pameran */
+                align-items: center; /* Merapikan secara vertikal ke tengah */
+            }
+            .project-section {
+                /* Kita pecah per kolom. Lebar 30vw artinya muat ~3 poster seukuran layar */
+                height: 75vh;
+                width: 25vw; 
+                min-width: 350px; /* Minimal width agar gambar tidak hancur saat dikecilkan layarnya */
+                margin-right: 4vw; /* Jarak antar lukisan (gap) */
+                flex-shrink: 0; /* Anti gepeng */
+                scroll-snap-align: center; /* Mengunci tepat di tengah-tengah frame */
+                background-color: transparent;
+                border-radius: 12px;
+                /* Hover efek sedikit mengangkat seperti galeri 3D */
+                transition: transform 0.4s ease, filter 0.4s;
+            }
+            
+            /* Kucik efek redup untuk gambar di luar fokus layar */
+            .project-section:hover {
+                transform: translateY(-10px) scale(1.02);
+                z-index: 20;
+            }
+            
+            .poster-image {
+                max-height: 100%; 
+                max-width: 100%;
+                box-shadow: 0 30px 60px rgba(0,0,0, 0.6);
+            }
+            .bg-blur {
+                /* Di desktop tidak butuh blur per item karena layar sudah terisi banyak item */
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full p-6 z-50 flex justify-between items-center text-white/80 mix-blend-difference">
+        <div class="text-xs md:text-sm tracking-[0.3em] uppercase font-bold text-emerald-500">SELARAS HORIZONTAL ARCHIVE</div>
+        <a href="index.html" class="text-[10px] md:text-xs uppercase tracking-widest border-b border-white hover:text-emerald-400 pb-1 transition-all">Kembali Ke Utama</a>
+    </header>
+
+    <!-- Scroll Indicator (Mobile Bawah, Desktop Samping) -->
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 text-white/40 mix-blend-difference pointer-events-none md:hidden animate-bounce">
+        <span class="text-[10px] uppercase tracking-widest">Usap Ke Atas</span>
+    </div>
+
+    <!-- Desktop Global Background Blur -->
+    <!-- Memberikan nuansa elegan di seluruh badan layarnya (Bukan per item lagi) -->
+    <div class="fixed inset-0 hidden md:block bg-gradient-to-r from-[#0f1112] via-[#1a1b15] to-[#0f1112] -z-10"></div>
+    <div class="fixed right-10 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4 text-emerald-500/50 mix-blend-difference pointer-events-none hidden md:flex">
+        <span class="text-[10px] uppercase tracking-widest rotate-90 mb-12 whitespace-nowrap drop-shadow-lg">Scroll Mouse</span>
+        <div class="w-[1px] h-24 bg-emerald-500 shrink-0 opacity-50"></div>
+    </div>
+
+    <!-- MAIN SCROLL SNAP CONTAINER -->
+    <main class="scroll-container" id="horizontalGallery">
+        
+        <!-- PROYEK 1 -->
+        <article class="project-section">
+            <div class="bg-blur md:hidden" style="background-image: url('poster1.png');"></div>
+            <img src="poster1.png" alt="Galeria 168 - The Gaia Hotel Bandung" class="poster-image">
+            <div class="sr-only">
+                <h1>Galeria 168 - The Gaia Hotel Bandung</h1>
+                <p>Status: Completed 2025. Proyek area komersial di Parongpong.</p>
+            </div>
+        </article>
+
+        <!-- PROYEK 2 -->
+        <article class="project-section">
+            <div class="bg-blur md:hidden" style="background-image: url('poster2.png');"></div>
+            <img src="poster2.png" alt="NC House Jatiasih Bekasi" class="poster-image">
+            <div class="sr-only">
+                <h2>NC House Perumahan Jatiasih Indah</h2>
+                <p>Status Pembangunan Berjalan / Under Construction 2025.</p>
+            </div>
+        </article>
+
+        <!-- PROYEK 3 -->
+        <article class="project-section">
+            <div class="bg-blur md:hidden" style="background-image: url('poster3.png');"></div>
+            <img src="poster3.png" alt="Flight 79 Sasakiranan Commercial Area" class="poster-image">
+            <div class="sr-only">
+                <h2>Flight 79 Sasakiranan (KBP)</h2>
+                <p>Desain Ruko/Area Komersil 2025.</p>
+            </div>
+        </article>
+
+        <!-- Menambahkan dummy slot (pura-pura proyek ke 4) agar terlihat panjangnya horizontal -->
+        <article class="project-section opacity-50 blur-[2px]">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&w=800&q=80" alt="Dummy" class="poster-image grayscale">
+        </article>
+        <!-- Dummy 5 -->
+        <article class="project-section opacity-30 blur-sm">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&w=800&q=80" alt="Dummy" class="poster-image grayscale">
+        </article>
+
+    </main>
+
+    <!-- KODE CONVERTER: Roda Mouse Vertikal Menjadi Scroll Horisontal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                const gallery = document.getElementById("horizontalGallery");
+                
+                gallery.addEventListener("wheel", function(evt) {
+                    // Hindari interupsi default jika itu bukan gesture trackpad spesifik
+                    evt.preventDefault();
+                    
+                    // Mengubah arah putaran scroll mouse (Atas-Bawah) menjadi (Kiri-Kanan)
+                    gallery.scrollLeft += evt.deltaY * 3; // Dikali 3 agar lebih cepat perpindahannya
+                }, { passive: false });
+            }
+        });
+    </script>
+</body>
+</html>

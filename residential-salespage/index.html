@@ -311,16 +311,17 @@ Ini tentang menghadirkan ruang yang selaras antara fungsi, estetika, dan kebutuh
         const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxeGnESRqrA6mqb3jw0G8hgpKUoKSWuljvOoyrL5On3rOSAhK8yCgTeAMwccg5-MoxJjw/exec";
 
         function trackClickEvent(e, projectName, targetUrl) {
-            e.preventDefault(); // Tahan navigasi sebentar
+            e.preventDefault(); 
             const data = JSON.stringify({ project: projectName, action: 'click' });
             
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon(TRACKING_URL, data);
-            } else {
-                fetch(TRACKING_URL, { method: 'POST', mode: 'no-cors', keepalive: true, body: data });
-            }
+            // fetch dengan no-cors bisa menembus blokade dari Google Script
+            fetch(TRACKING_URL, { 
+                method: 'POST', 
+                mode: 'no-cors', 
+                keepalive: true, 
+                body: data 
+            });
 
-            // Pindah halaman setelah 300ms agar pengiriman di atas terjamin
             setTimeout(() => {
                 window.location.href = targetUrl;
             }, 300);

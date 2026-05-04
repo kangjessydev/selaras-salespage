@@ -256,11 +256,13 @@
                     duration: duration 
                 });
                 
-                if (navigator.sendBeacon) {
-                    navigator.sendBeacon(TRACKING_URL, data);
-                } else {
-                    fetch(TRACKING_URL, { method: 'POST', mode: 'no-cors', keepalive: true, body: data });
-                }
+                // Murni menggunakan fetch dengan no-cors agar dapat menembus Google Apps Script
+                fetch(TRACKING_URL, { 
+                    method: 'POST', 
+                    mode: 'no-cors', 
+                    keepalive: true, 
+                    body: data 
+                });
             }
         }
 

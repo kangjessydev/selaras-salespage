@@ -240,7 +240,7 @@
 
         // Tracking Logic (Satu Kali Pengiriman & Akurat)
         const TRACKING_URL = "https://script.google.com/macros/s/AKfycbxeGnESRqrA6mqb3jw0G8hgpKUoKSWuljvOoyrL5On3rOSAhK8yCgTeAMwccg5-MoxJjw/exec";
-        const startTime = Date.now();
+        let startTime = Date.now(); // Diubah ke let agar bisa di-reset
         const projectName = project === 'minimalist' ? 'Minimalist Home' : 'Modern Tropical';
         let trackingSent = false;
 
@@ -268,7 +268,13 @@
 
         // Tangkap berbagai kejadian: pindah tab, close tab, atau keluar dari app browser di HP
         document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'hidden') sendDurationTracker();
+            if (document.visibilityState === 'hidden') {
+                sendDurationTracker();
+            } else if (document.visibilityState === 'visible') {
+                // Ketika pengunjung kembali ke tab ini, mulai hitungan sesi baru dari 0
+                startTime = Date.now();
+                trackingSent = false;
+            }
         });
         window.addEventListener('pagehide', sendDurationTracker);
         window.addEventListener('beforeunload', sendDurationTracker);

@@ -44,10 +44,10 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        /* Lock height for desktop to fit screen comfortably */
+        /* Reduced height for landscape-focused presentation */
         @media (min-width: 1024px) {
             .carousel-height {
-                height: 450px;
+                height: 380px;
             }
         }
     </style>
@@ -63,7 +63,7 @@
                 </svg>
                 <span class="font-medium">Kembali</span>
             </button>
-            <img src="selaras-logo.webp" alt="Logo" class="h-8 w-auto">
+            <img src="../selaras-logo.webp" alt="Logo" class="h-8 w-auto">
             <div class="hidden md:flex gap-6 items-center">
                 <a href="#section-desain" class="text-xs uppercase tracking-widest font-bold hover:text-family-wood transition-colors">Visualisasi Desain</a>
                 <a href="#section-hasil" class="text-xs uppercase tracking-widest font-bold hover:text-family-wood transition-colors">Hasil Akhir</a>
@@ -81,16 +81,20 @@
             </div>
             <div class="flex lg:justify-end gap-x-8 text-xs uppercase tracking-widest border-l lg:border-l-0 lg:border-r border-family-wood/30 pl-4 lg:pr-4">
                 <div>
+                    <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Luas Tanah</span>
+                    <span id="header-spec-land" class="font-bold">250 m²</span>
+                </div>
+                <div>
                     <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Luas Bangunan</span>
-                    <span class="font-bold">320 m²</span>
+                    <span id="header-spec-build" class="font-bold">320 m²</span>
                 </div>
                 <div>
                     <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Tahun</span>
-                    <span class="font-bold">2024</span>
+                    <span id="header-spec-year" class="font-bold">2024</span>
                 </div>
                 <div>
                     <span class="block text-family-gray mb-1 opacity-60 text-[9px]">Status</span>
-                    <span class="font-bold text-green-700">Selesai 100%</span>
+                    <span id="header-spec-status" class="font-bold text-green-700">Selesai 100%</span>
                 </div>
             </div>
         </div>
@@ -105,7 +109,7 @@
                     <span class="text-[10px] text-family-gray italic">Rencana Awal</span>
                 </div>
                 <div class="relative group">
-                    <div id="carousel-desain" class="carousel-container flex overflow-x-auto hide-scrollbar rounded-lg shadow-xl bg-black carousel-height aspect-video lg:aspect-auto">
+                    <div id="carousel-desain" class="carousel-container flex overflow-x-auto hide-scrollbar rounded-lg shadow-xl bg-black carousel-height aspect-[16/8] lg:aspect-auto">
                         <div class="carousel-item relative">
                             <img src="https://images.unsplash.com/photo-1600607687940-477a128f198e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-90" alt="Design 1">
                         </div>
@@ -126,11 +130,11 @@
             <!-- SECTION 2: HASIL -->
             <div id="section-hasil" class="space-y-4">
                 <div class="flex justify-between items-center px-1">
-                    <h2 class="font-heading font-bold text-xs uppercase tracking-widest text-family-wood">02. Hasil Akhir (Konstruksi)</h2>
+                    <h2 class="font-heading font-bold text-xs uppercase tracking-widest text-family-wood">02. Hasil Akhir (Realisasi)</h2>
                     <span class="text-[10px] text-green-700 font-bold uppercase tracking-tight">Realita Unit</span>
                 </div>
                 <div class="relative group">
-                    <div id="carousel-hasil" class="carousel-container flex overflow-x-auto hide-scrollbar rounded-lg shadow-xl bg-black carousel-height aspect-video lg:aspect-auto">
+                    <div id="carousel-hasil" class="carousel-container flex overflow-x-auto hide-scrollbar rounded-lg shadow-xl bg-black carousel-height aspect-[16/8] lg:aspect-auto">
                         <div class="carousel-item relative">
                             <img src="https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Result 1">
                         </div>
@@ -150,18 +154,19 @@
 
         </div>
 
-        <!-- About Project -->
-        <div class="bg-white p-6 md:p-10 rounded-lg shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 class="font-serif text-2xl mb-4 text-center">Narasi Konsep</h3>
-            <p class="text-family-sage text-center font-light leading-relaxed mb-0">
-                Memadukan unsur tropis dengan geometri modern yang tegas. Selaras Studio memastikan setiap modul material, mulai dari fasad hingga interior, dikerjakan dengan presisi tinggi di pabrik sebelum dipasang secara modular di lokasi untuk hasil yang tanpa cacat.
-            </p>
+        <!-- Project Description (Box removed) -->
+        <div class="mt-12 max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl mb-6 text-center">Tentang Proyek</h2>
+            <div class="space-y-6 text-family-sage leading-relaxed font-light text-center">
+                <p id="project-desc-1">Rumah ini dirancang dengan konsep Modern Tropical yang menekankan pada sirkulasi udara alami dan pencahayaan yang melimpah. Penggunaan material kayu dan batu alam memberikan sentuhan hangat dan mewah pada hunian ini.</p>
+                <p id="project-desc-2">Fokus utama pengerjaan meliputi struktur utama, detail fasad serta integrasi lansekap yang menyatu dengan area ruang tamu semi-terbuka. Setiap sudut dipastikan presisi sesuai standar kualitas Sangga Citra Selaras.</p>
+            </div>
         </div>
     </main>
 
     <footer class="bg-family-forest text-family-cream py-10 mt-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <img src="selaras-logo.webp" alt="Logo" class="h-6 w-auto mx-auto mb-4 opacity-70 brightness-200">
+            <img src="../selaras-logo.webp" alt="Logo" class="h-6 w-auto mx-auto mb-4 opacity-70 brightness-200">
             <p class="text-[10px] opacity-40 uppercase tracking-widest font-bold">Sangga Citra Selaras — Mitra Design & Build Anda</p>
         </div>
     </footer>
@@ -221,6 +226,16 @@
             document.getElementById('project-title').textContent = "Contemporary Minimalist Home";
             document.getElementById('project-location').textContent = "Cibubur, Jakarta Timur";
             document.getElementById('project-category').textContent = "Fasad Renovation & Ekstensi Atap";
+            
+            // Update Header Specs
+            document.getElementById('header-spec-land').textContent = "180 m²";
+            document.getElementById('header-spec-build').textContent = "210 m²";
+            document.getElementById('header-spec-year').textContent = "2023";
+            document.getElementById('header-spec-status').textContent = "Selesai 100%";
+            
+            // Update Description
+            document.getElementById('project-desc-1').textContent = "Proyek ini berfokus pada modernisasi fasad rumah lama menjadi tampilan minimalis kontemporer yang bersih. Kami menambahkan sistem atap tambahan untuk area balkon belakang.";
+            document.getElementById('project-desc-2').textContent = "Pengerjaan mencakup penggantian material eksterior menjadi kombinasi semen ekspos dan aksen metal, memberikan karakter yang lebih maskulin dan low-maintenance.";
         }
     </script>
 </body>

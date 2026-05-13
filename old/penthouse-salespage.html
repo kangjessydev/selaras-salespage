@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Apartment & Penthouse Interior Fit-Out | Selaras Studio</title>
+    <meta name="description" content="Spesialis interior turnkey untuk apartemen mewah. Pengerjaan cepat, bersih, 100% custom furniture. Anda tinggal bawa koper.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        city: {
+                            light: '#F5F5F7',   /* Apple-like pristine gray-white */
+                            dark: '#0A0A0A',    /* Pure luxury black */
+                            accent: '#D4AF37',  /* Champagne Gold */
+                            accentHover: '#B5952F',
+                            gray: '#171717',    /* Secondary dark */
+                            textMuted: '#A3A3A3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Epilogue', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: theme('colors.city.dark'); color: theme('colors.city.light'); }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bg-penthouse {
+            background-image: linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 100%), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #F3E5AB, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-city-accent selection:text-black">
+
+    <!-- URGENCY NUDGE -->
+    <div class="bg-city-gray text-city-textMuted py-2 text-center text-[10px] md:text-sm tracking-[0.2em] uppercase font-light border-b border-white/5">
+        Eksklusif Area Sudirman, Senopati, Kuningan, & Sekitarnya
+    </div>
+
+    <!-- MINIMALIST NAV -->
+    <nav class="absolute w-full z-50 py-8">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <span class="font-sans text-xl font-medium tracking-[0.3em] text-white uppercase">SELARAS<span class="text-city-accent">.</span></span>
+            <span class="text-xs text-city-textMuted uppercase tracking-widest border border-white/20 px-4 py-2">Premium Fit-Out</span>
+        </div>
+    </nav>
+
+    <!-- HERO: HIGH CONTRAST CITY VIBE -->
+    <header class="relative min-h-[95vh] flex items-center pt-20 pb-24 bg-penthouse">
+        <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+            <div class="animate-fade-in-up max-w-3xl">
+                <h1 class="font-sans font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-8 tracking-tight">
+                    Interior Apartemen Siap Huni. <br>
+                    <span class="font-serif italic gold-gradient-text">Anda Tinggal Bawa Koper.</span>
+                </h1>
+                <p class="text-city-textMuted text-lg md:text-xl font-light mb-12 max-w-2xl leading-relaxed">
+                    Spesialis <i>turn-key interior</i> unit apartemen dan penthouse mewah. Kami mereduksi kebisingan renovasi dengan sistem manufaktur <i>off-site</i>. Selesai super presisi dalam 45-60 hari.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="#jadwal" class="inline-block bg-white text-city-dark uppercase tracking-widest text-xs font-semibold px-10 py-5 text-center hover:bg-gray-200 transition-colors">
+                        Jadwalkan Survei Unit
+                    </a>
+                    <a href="#karya" class="inline-block bg-transparent border border-white/30 text-white uppercase tracking-widest text-xs font-semibold px-10 py-5 text-center hover:border-white transition-colors">
+                        Lihat Portofolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- THE UGLY TRUTH (Targeting Executive Apartment Pain Points) -->
+    <section class="py-24 bg-city-dark border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 reveal">
+            <h2 class="font-sans font-light text-2xl md:text-4xl mb-16 text-white max-w-3xl leading-snug">
+                Merenovasi apartemen jauh lebih membuat stres daripada rumah biasa. <span class="text-city-accent font-medium">Banyak pemborong tidak sanggup dengan aturan ketat manajemen gedung.</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div>
+                    <span class="text-city-accent font-serif text-5xl opacity-40 mb-4 block">01</span>
+                    <h3 class="font-sans font-medium text-lg mb-3 text-white">Drama Manajemen Gedung</h3>
+                    <p class="text-sm text-city-textMuted leading-relaxed">Tukang Anda selalu ditegur <i>Building Management</i> karena berisik, kotor, dan bekerja melampaui jam izin kerja apartemen.</p>
+                </div>
+                <div>
+                    <span class="text-city-accent font-serif text-5xl opacity-40 mb-4 block">02</span>
+                    <h3 class="font-sans font-medium text-lg mb-3 text-white">Furniture Retail "Nanggung"</h3>
+                    <p class="text-sm text-city-textMuted leading-relaxed">Membeli perabot <em>ready-stock</em> (IKEA/Informa) membuat unit terasa sempit, menyisakan ruang mati, dan plafon terlihat tidak menyatu (tidak presisi).</p>
+                </div>
+                <div>
+                    <span class="text-city-accent font-serif text-5xl opacity-40 mb-4 block">03</span>
+                    <h3 class="font-sans font-medium text-lg mb-3 text-white">Manajemen Waktu Amburadul</h3>
+                    <p class="text-sm text-city-textMuted leading-relaxed">Nilai sewa bulanan Anda melayang sia-sia hanya karena unit tidak kunjung selesai berbulan-bulan menunggu material dikerjakan pelan di lokasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SOLUTION: Off-Site Manufacturing & Turn-key -->
+    <section class="py-24 bg-city-gray">
+        <div class="max-w-6xl mx-auto px-6 reveal flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-5/12 order-2 lg:order-1 relative">
+                <!-- Sleek abstract image -->
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Penthouse Kitchen" class="w-full aspect-[3/4] object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700">
+                <div class="absolute -bottom-6 -left-6 bg-city-accent text-city-dark p-6 hidden md:block">
+                    <p class="font-serif italic text-2xl">Precision</p>
+                    <p class="text-xs uppercase tracking-widest font-bold mt-1">To the millimeter.</p>
+                </div>
+            </div>
+            <div class="lg:w-7/12 order-1 lg:order-2">
+                <p class="text-city-accent uppercase tracking-widest text-[10px] font-bold mb-4">Sistem Fit-Out Kelas Eksekutif</p>
+                <h2 class="font-sans font-light text-3xl md:text-5xl mb-8 leading-tight">Kami bekerja di <em>workshop</em>, bukan mengotori Apartemen Anda.</h2>
+                <p class="text-city-textMuted text-lg font-light leading-relaxed mb-10">
+                    Selaras memecahkan masalah klasik apartemen dengan teknik <b>Off-site Manufacturing</b>. Semua <i>custom cabinetry</i>, <i>built-in wardrobe</i>, dan instalasi kayu dikerjakan di pabrik kami.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="border-t border-white/10 pt-6">
+                        <h4 class="font-sans text-xl text-white mb-2">100% Presisi Laser Custom-Fit</h4>
+                        <p class="text-sm text-city-textMuted">Tinggi plafon dan sudut asimetris ruang diakali secara jenius tanpa celah debu <em>(seamless)</em>. Unit terasa dua kali lebih luas.</p>
+                    </div>
+                    <div class="border-t border-white/10 pt-6">
+                        <h4 class="font-sans text-xl text-white mb-2">Instalasi Kilat & Tanpa Debu Berat</h4>
+                        <p class="text-sm text-city-textMuted">Modul yang sudah jadi di pabrik hanya dirakit (assembly) di apartemen Anda. Kami mematuhi regulasi ketat manajemen gedung tersulit sekalipun.</p>
+                    </div>
+                    <div class="border-t border-white/10 pt-6">
+                        <h4 class="font-sans text-xl text-white mb-2">Full Furnished (Termasuk Dekorasi & Elektronik)</h4>
+                        <p class="text-sm text-city-textMuted">Anda tidak perlu beli kasur, gorden, atau sendok sendiri. Kami menyediakan lisensi <em>White Glove Handover</em>, unit benar-benar siap langsung ditiduri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO/KARYA (Refined grid) -->
+    <section class="py-24 bg-city-dark" id="karya">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="font-sans font-light text-3xl md:text-5xl text-white">Signature Suites</h2>
+                    <p class="text-city-textMuted mt-4 max-w-lg">Sebagian letak portofolio kami ada di District 8, Anandamaya, dan Pakubuwono Residences.</p>
+                </div>
+                <div class="text-city-accent font-sans uppercase tracking-widest text-[10px] font-bold pb-2 border-b border-city-accent">Tersedia via presentasi 1-on-1</div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[600px]">
+                <div class="md:col-span-8 relative group overflow-hidden bg-city-gray aspect-video md:aspect-auto">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Penthouse Living" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="text-white font-sans text-xl">Sudirman Suite VVIP</p>
+                        <p class="text-city-accent text-xs uppercase tracking-widest mt-1">Living & Dining Sector</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex flex-col gap-4">
+                    <div class="h-1/2 relative group overflow-hidden bg-city-gray aspect-video md:aspect-auto">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Master Bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                            <p class="text-white font-sans text-base">Senopati Master Bed</p>
+                        </div>
+                    </div>
+                    <div class="h-1/2 relative group overflow-hidden bg-city-gray aspect-video md:aspect-auto">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Walk-in Closet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                            <p class="text-white font-sans text-base">Custom Wardrobe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SQUEEZE CTA (Ultra Minimalist) -->
+    <section class="py-32 bg-city-light text-city-dark text-center" id="jadwal">
+        <div class="max-w-3xl mx-auto px-6 reveal">
+            <h2 class="font-serif italic text-4xl md:text-6xl mb-6">Mulai Transformasi Unit Anda.</h2>
+            <p class="text-gray-600 mb-12 text-lg">
+                Jadwalkan pengukuran <em>as-built</em> dan meeting konsultasi desain langsung di lokasi unit Anda bersama Lead Interior Architecture kami. (Khusus nominal pengerjaan > Rp 500 Juta).
+            </p>
+            
+            <a href="https://wa.me/628551266611?text=Halo%2C%20Sangga%20Citra%20Selaras.%20Saya%20ingin%20mengkonsultasikan%20kebutuhan%20proyek%20saya." target="_blank" class="inline-flex items-center justify-center gap-3 bg-city-dark text-white uppercase tracking-[0.2em] text-xs font-bold px-12 py-6 hover:bg-black transition-all">
+                Minta Jadwal Survei via WhatsApp
+            </a>
+            
+            <p class="text-xs text-gray-400 mt-8 font-sans uppercase tracking-widest border-t border-black/10 pt-6 inline-block">100% Confidential • Corporate Standards</p>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50; 
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>

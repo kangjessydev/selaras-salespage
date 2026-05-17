@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Proyek | Sangga Citra Selaras</title>
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2392579824543642');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2392579824543642&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
@@ -268,6 +286,14 @@
         let startTime = Date.now(); // Diubah ke let agar bisa di-reset
         const projectName = project === 'flight79' ? 'Flight 79' : 'Galeria 168';
         let trackingSent = false;
+
+        // Track standard ViewContent event on page load for the selected project
+        if (typeof fbq === 'function') {
+            fbq('track', 'ViewContent', {
+                content_name: projectName,
+                content_category: 'Portfolio Detail'
+            });
+        }
 
         function sendDurationTracker() {
             if (trackingSent) return; // Pastikan data hanya terkirim 1x per kunjungan
